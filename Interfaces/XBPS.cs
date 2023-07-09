@@ -7,7 +7,9 @@ public class XBPS : PackageManager
 	public override IEnumerable<string> Search(string Package)
 	{
 		Console.WriteLine("Search is not implemented.");
-		return null;
+		List<string> SearchPackages = new List<string>();
+		SearchPackages.Add("Search is not implemented.");
+		return SearchPackages;
 	}
 
 	public override void Install(string Package)

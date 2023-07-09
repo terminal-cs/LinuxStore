@@ -7,3 +7,6 @@ debug:
 
 uninstall:
 	@sudo rm /bin/linuxstore
+
+clean:
+	@rm -Rf bin obj

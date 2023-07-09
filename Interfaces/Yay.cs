@@ -61,12 +61,12 @@ public class Yay : PackageManager
         ExecuteLogged("/usr/bin/yay", " -Qdtq", false, true,temp_file);
         List<string>Packages = new List<string>();
         const Int32 BufferSize = 128;
-        String line;
+        String? line;
         using (var fileStream = File.OpenRead(temp_file)) 
 
         using (var streamReader = new StreamReader(fileStream, Encoding.UTF8, true, BufferSize)) 
         {
-                    while ((line = streamReader.ReadLine()) != null)
+                    while ((line = streamReader.ReadLine()) !=null)
                     {
                         if(!String.IsNullOrEmpty(line))
                         {
