@@ -9,10 +9,14 @@ public static class Program
 	public static void Main(string[] args)
 	{
 		// Get any available instance of a package manager.
+		// Get any available instance of a package manager.
 		PackageManager? Manager =
 			File.Exists("/bin/xbps-install") ? new XBPS() :
-			File.Exists("/bin/pacman") ? new Pacman() :
 			File.Exists("/bin/apt") ? new Aptitude() :
+			//change to /usr/bin for arch since that is the reported path on a pure arch install.
+			File.Exists("/usr/bin/yay") ? new Yay() :
+			//check for pacman last as yay can do pacman operations also and we want to use yay if it's available because of AUR.
+			File.Exists("/usr/bin/pacman") ? new Pacman() :
 			null;
 
 		// Check if the package manager wasn't initialized.
