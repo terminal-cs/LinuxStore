@@ -1,8 +1,11 @@
+using System.Text;
+using System.Collections.Generic;
 namespace LinuxStore.Interfaces;
 
 public class Yay : PackageManager
 {
 	#region Methods
+    public static string temp_file = "files.txt";
 
 	public override IEnumerable<string> Search(string Package)
 	{
@@ -34,12 +37,12 @@ public class Yay : PackageManager
 
 	public override void Install(string Package)
 	{
-		Execute("/usr/bin/yay", $"-S {Package}", true, false);
+		Execute("/usr/bin/yay", $"-S {Package}", false, false);
 	}
 
 	public override void Remove(string Package)
 	{
-		Execute("/usr/bin/yay", $"-Rns {Package}", true, false);
+		Execute("/usr/bin/yay", $"-Rns {Package}", false, false);
 	}
 
 	public override void About(string Package)
@@ -49,13 +52,36 @@ public class Yay : PackageManager
 
 	public override void Update()
 	{
-		Execute("/usr/bin/yay", "-Syu", true, false);
+		Execute("/usr/bin/yay", "-Syu", false, false);
 	}
 
 	public override void Clean()
 	{
-		Execute("/usr/bin/yay", "-Rsn $(pacman -Qdtq)", true, false);
-	}
+        //Yay does not like to be piped into a second command, so we use hack it by writing to a file , then reading from it and executing the second command
+        ExecuteLogged("/usr/bin/yay", " -Qdtq", false, true,temp_file);
+        List<string>Packages = new List<string>();
+        const Int32 BufferSize = 128;
+        String line;
+        using (var fileStream = File.OpenRead(temp_file)) 
+
+        using (var streamReader = new StreamReader(fileStream, Encoding.UTF8, true, BufferSize)) 
+        {
+                    while ((line = streamReader.ReadLine()) != null)
+                    {
+                        if(!String.IsNullOrEmpty(line))
+                        {
+                            Packages.Add(line);
+                        } 
+                    }
+                    string result = String.Join(" ", Packages);
+                    Execute("/usr/bin/yay", "-Rsn --noconfirm "+result, false, false);
+        if(File.Exists(temp_file))
+        {
+            File.Delete(temp_file);
+        }
+            Packages.Clear();
+    	}
+    }
 
 	#endregion
 }

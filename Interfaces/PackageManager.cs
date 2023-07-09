@@ -34,6 +34,42 @@ public abstract class PackageManager
 	}
 
 	/// <summary>
+	/// Executes a one-off command to the specified binary.
+	/// </summary>
+	/// <returns>The command's output to file.</returns>
+	internal static StreamReader? ExecuteLogged(string BinaryPath, string Arguments, bool AsAdmin, bool UseRedirect, string path)
+	{
+		// Creates a new process instance.
+		Process Command = new()
+		{
+			StartInfo = new()
+			{
+				Arguments = AsAdmin ? $"{BinaryPath} {Arguments}" : Arguments,
+				FileName = AsAdmin ? "sudo" : BinaryPath,
+				RedirectStandardOutput = UseRedirect,
+			},
+		};
+
+		// Starts the command.
+		Command.Start();
+
+		// Waits for the command to exit.
+		Command.WaitForExit();
+		//write to file
+		using (StreamWriter sw = File.CreateText(path))
+		{
+			        using (StreamReader reader = Command.StandardOutput)
+        			{
+        				string result = reader.ReadToEnd();
+						sw.WriteLine(result);
+					}
+		}
+		// Returns the command's output.
+		return UseRedirect ? Command.StandardOutput : null;
+	}
+	
+
+	/// <summary>
 	/// Searches for packages matching the specified search queries.
 	/// </summary>
 	/// <returns>A list of packages matching the search term.</returns>
