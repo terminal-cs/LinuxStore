@@ -1,0 +1,4 @@
+/home/evan/Documents/Projects/LinuxStore/bin/Debug/net7.0/publish/LinuxStore
+/home/evan/Documents/Projects/LinuxStore/bin/Debug/net7.0/publish/LinuxStore.dll
+/home/evan/Documents/Projects/LinuxStore/bin/Debug/net7.0/publish/LinuxStore.deps.json
+/home/evan/Documents/Projects/LinuxStore/bin/Debug/net7.0/publish/LinuxStore.runtimeconfig.json

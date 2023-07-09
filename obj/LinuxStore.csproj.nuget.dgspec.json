@@ -1,0 +1,103 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/evan/Documents/Projects/LinuxStore/LinuxStore.csproj": {}
+  },
+  "projects": {
+    "/home/evan/Documents/Projects/LinuxStore/LinuxStore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/evan/Documents/Projects/LinuxStore/LinuxStore.csproj",
+        "projectName": "LinuxStore",
+        "projectPath": "/home/evan/Documents/Projects/LinuxStore/LinuxStore.csproj",
+        "packagesPath": "/home/evan/.nuget/packages/",
+        "outputPath": "/home/evan/Documents/Projects/LinuxStore/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/home/evan/.local/share/godot/mono/GodotNuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/evan/.nuget/NuGet/NuGet.Config",
+          "/home/evan/.nuget/NuGet/config/Godot.Offline.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/opt/cosmos/Packages/": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Eto.Forms": {
+              "target": "Package",
+              "version": "[2.7.5, )"
+            },
+            "Eto.Platform.Gtk": {
+              "target": "Package",
+              "version": "[2.7.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.3, 7.0.3]"
+            },
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[7.0.3, 7.0.3]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[7.0.3, 7.0.3]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[7.0.3, 7.0.3]"
+            },
+            {
+              "name": "runtime.linux-x64.Microsoft.DotNet.ILCompiler",
+              "version": "[7.0.3, 7.0.3]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.103/RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

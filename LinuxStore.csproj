@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<SelfContained>true</SelfContained>
+		<OutputType>Exe</OutputType>
+    	<Nullable>enable</Nullable>
+
+	</PropertyGroup>
+
+	<!-- Enable AOT when release mode is enabled. -->
+	<PropertyGroup Condition="'$(Configuration)'=='Release'">
+		<PublishAot>true</PublishAot>
+		<Optimize>true</Optimize>
+
+	</PropertyGroup>
+
+</Project>

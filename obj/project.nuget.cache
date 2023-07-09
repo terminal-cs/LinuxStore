@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "j/knW4ZAiJsXYyUVmjzF9DVAfjSYVLtKWespjrlTdB5VW0IqZbyCgAI5zkXBFlYEumCoaTV3BztkdtPL2oOjtg==",
+  "success": true,
+  "projectFilePath": "/home/evan/Documents/Projects/LinuxStore/LinuxStore.csproj",
+  "expectedPackageFiles": [
+    "/home/evan/.nuget/packages/atksharp/3.24.24.38/atksharp.3.24.24.38.nupkg.sha512",
+    "/home/evan/.nuget/packages/cairosharp/3.24.24.38/cairosharp.3.24.24.38.nupkg.sha512",
+    "/home/evan/.nuget/packages/eto.forms/2.7.5/eto.forms.2.7.5.nupkg.sha512",
+    "/home/evan/.nuget/packages/eto.platform.gtk/2.7.5/eto.platform.gtk.2.7.5.nupkg.sha512",
+    "/home/evan/.nuget/packages/gdksharp/3.24.24.38/gdksharp.3.24.24.38.nupkg.sha512",
+    "/home/evan/.nuget/packages/giosharp/3.24.24.38/giosharp.3.24.24.38.nupkg.sha512",
+    "/home/evan/.nuget/packages/glibsharp/3.24.24.38/glibsharp.3.24.24.38.nupkg.sha512",
+    "/home/evan/.nuget/packages/gtksharp/3.24.24.38/gtksharp.3.24.24.38.nupkg.sha512",
+    "/home/evan/.nuget/packages/pangosharp/3.24.24.38/pangosharp.3.24.24.38.nupkg.sha512",
+    "/home/evan/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "/home/evan/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/7.0.3/microsoft.netcore.app.runtime.linux-x64.7.0.3.nupkg.sha512",
+    "/home/evan/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.3/microsoft.aspnetcore.app.ref.7.0.3.nupkg.sha512",
+    "/home/evan/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/7.0.3/microsoft.aspnetcore.app.runtime.linux-x64.7.0.3.nupkg.sha512",
+    "/home/evan/.nuget/packages/runtime.linux-x64.microsoft.dotnet.ilcompiler/7.0.3/runtime.linux-x64.microsoft.dotnet.ilcompiler.7.0.3.nupkg.sha512",
+    "/home/evan/.nuget/packages/microsoft.netcore.app.host.linux-x64/7.0.3/microsoft.netcore.app.host.linux-x64.7.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
